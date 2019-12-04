@@ -1,0 +1,78 @@
+footer {
+  background-color: #dddddd;
+
+  > .row {
+    padding: $spacer * 2 $spacer * 8;
+    margin: 0;
+
+    @include media-breakpoint-down(lg) {
+      padding: $spacer * 2 $spacer;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: $spacer $spacer * 2;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: $spacer $spacer;
+    }
+
+    .footer-col {
+      border-right: 1px solid #000;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: $spacer * 1.5;
+        padding-right: $spacer * 1.5;
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-left: $spacer;
+        padding-right: $spacer;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: $spacer * 2;
+        border-right: none;
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+
+  .footer__title {
+    text-transform: uppercase;
+    margin-bottom: $spacer * 2.5;
+    font-size: 1.3rem;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $spacer * 1.5;
+    }
+  }
+
+  .footer__list {
+    @include list-unstyled();
+    line-height: 2.3;
+
+    a {
+      color: #000;
+
+      @include hover-focus() {
+        color: #000;
+      }
+    }
+  }
+
+  .copyright {
+    background: #000;
+    color: #fff;
+    text-align: right;
+    padding: $spacer * 2 $spacer * 2;
+    margin-top: $spacer * 2;
+  }
+}

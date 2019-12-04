@@ -1,0 +1,45 @@
+.productCard__tags {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+
+  @include media-breakpoint-down(sm) {
+    right: initial;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+.tag {
+  display: flex;
+}
+
+.tag__item {
+  padding: 5px 15px;
+}
+
+.tag__item--sale {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.tag__item--danger {
+  background-color: rgba($danger, 0.75);
+  color: color-yiq($danger);
+}
+
+.tag__item--info {
+  background-color: rgba($info, 0.75);
+  color: color-yiq($info);
+}
+
+.tag__item--success {
+  background-color: rgba($success, 0.75);
+  color: color-yiq($success);
+}
+
+.tag__item--warning {
+  background-color: rgba($warning, 0.75);
+  color: color-yiq($warning);
+}

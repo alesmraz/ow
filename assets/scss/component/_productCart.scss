@@ -1,0 +1,136 @@
+.productCart--overflow {
+  max-height: 500px;
+  overflow-x: hidden;
+
+  .buyerpanel--cart {
+    flex-direction: row;
+
+    @media screen and (max-width: 545px){
+      flex-direction: column;
+    }
+  }
+  .buyerpanel__typeSelect {
+    flex: initial;
+  }
+
+  .price {
+    @media screen and (max-width: 545px){
+      margin-bottom: $spacer;
+    }
+  }
+
+  .price__remove {
+    @media screen and (max-width: 545px){
+      width: 100%;
+      text-align: left;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.productCart--light {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.productCart__item {
+  display: flex;
+  border: 1px solid $gray;
+  padding: $spacer $spacer * 1.5 0 $spacer * 1.5;
+  margin-bottom: $spacer;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    padding: $spacer / 2 $spacer 0 $spacer / 2;
+  }
+}
+
+.cart {
+  .productCart__item {
+    border: none;
+    background-color: $brown-light;
+
+    @include media-breakpoint-down(sm) {
+      max-height: initial;
+    }
+  }
+}
+
+.productCart__text {
+  flex: 7;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+
+  .text {
+    flex: 2;
+
+      .title {
+        font-family: $font-family-base;
+        color: #000;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+  }
+
+  .buyerpanel {
+    flex: 1;
+    padding: 0;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(lg) {
+      flex: 2;
+    }
+
+    .buyerpanel__typeSelect {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      @include media-breakpoint-down(sm) {
+        flex: initial;
+        max-width: 50%;
+        margin-left: 50%;
+      }
+
+      @media screen and (max-width: 545px){
+        margin-left: auto;
+      }
+
+    }
+  }
+
+}
+
+.productCart__image {
+  flex: 1;
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+  }
+
+  .title--mobile {
+    display: none;
+    color: #000;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  > img {
+    max-width: 100%;
+    width: 100px;
+
+    @include media-breakpoint-down(sm) {
+      @include object-fit(cover);
+    }
+  }
+}

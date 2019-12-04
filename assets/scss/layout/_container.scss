@@ -1,0 +1,11 @@
+.container--section {
+  max-width: calc(#{map_get($container-max-widths, 'xl')} + #{$spacer * 2}) ;
+  margin: 0 auto;
+  padding: 0 $spacer;
+
+  &.cart {
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+  }
+}

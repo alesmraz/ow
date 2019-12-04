@@ -1,0 +1,44 @@
+@mixin get-stripe-offset($max-width: 100%, $offset: 0px) {
+  padding-left: calc((100vw - #{$max-width} + #{$offset}) / 2);
+  padding-right: calc((100vw - #{$max-width} + #{$offset}) / 2);
+  margin-left: calc((-100vw + 100%) / 2);
+  margin-right: calc((-100vw + 100%) / 2);
+
+  @media (max-width: calc(#{$max-width} + #{$grid-gutter-width})) {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+  }
+}
+
+@mixin stripe-variant($background) {
+  color: color-yiq($background);
+  background-color: $background;
+
+  a {
+    text-decoration: underline;
+    &,
+    &:hover,
+    &:focus {
+      color: color-yiq($background);
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.stripe {
+  @include get-stripe-offset();
+}
+
+.stripe--full {
+  overflow-x: hidden;
+  padding-left: 0;
+  padding-right: 0;
+
+  .productDetail & {
+    padding-bottom: 5px;
+  }
+}

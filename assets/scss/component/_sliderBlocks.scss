@@ -1,0 +1,140 @@
+.sliderBlocks {
+  position: absolute;
+  bottom: 10vh;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.sliderBlocks--static {
+  position: relative;
+  bottom: 0;
+  max-width: 1170px;
+  margin: 0 auto;
+
+  .sliderBlocks__item {
+    margin: 0 1rem;
+  }
+}
+
+.sliderBlocks__item {
+  background-color: #fff;
+  flex: 1;
+  text-align: center;
+  margin: 0 $spacer * 2;
+  transition: transform 0.2s ease-in-out;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 106px;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: 0 $spacer / 4;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0;
+  }
+
+  .title {
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
+  }
+
+  @include hover-focus() {
+    transform: scale(1.05);
+    z-index: 1;
+    text-decoration: none;
+  }
+}
+
+.sliderBlocks__item--gray {
+  background-color: #1e1e1e;
+}
+
+.sliderBlocks__item--primary {
+  background-color: $primary;
+}
+
+.sliderBlocks__item--brown {
+  background-color: #9c9288;
+}
+
+.sliderBlocks__item--yellow {
+  background-color: #BAB37A;
+}
+
+.sliderBlocks--brand {
+  bottom: 1.5vh;
+
+
+  @include media-breakpoint-down(sm) {
+    bottom: initial;
+    top: $brand-sm-size;
+  }
+
+  .sliderBlocks__item {
+    color: #fff;
+    text-align: left;
+    padding: 15px $spacer 15px $spacer * 4;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+
+    &:before {
+      content: '';
+      display: block;
+      background: url('../svg/story-sign.svg') center center no-repeat;
+      @include size(35px);
+      border: 1px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: $spacer;
+      top: $spacer + $spacer / 2;
+    }
+
+    @include hover-focus() {
+      color: #fff;
+    }
+
+    .title {
+      font-family: $font-family-base;
+      font-size: $font-size-lg;
+      margin-bottom: $spacer / 4;
+    }
+
+    h5.title {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+      margin-bottom: 0;
+    }
+
+  }
+
+}

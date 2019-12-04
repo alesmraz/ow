@@ -1,0 +1,33 @@
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: .5rem 5px 0 0;
+  padding: 0;
+  padding-top: 5px;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+
+  .productCard {
+    flex: 0 0 calc((100% / 3));
+
+    @media screen and (max-width: 1280px) {
+      flex: 0 0 calc((100% / 2));
+    }
+
+    @media screen and (max-width: 696px) {
+      flex: 0 0 calc(100%);
+    }
+  }
+}
+
+#productModal {
+  .modal-title {
+    font-size: 2rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 1.2rem;
+    }
+  }
+}

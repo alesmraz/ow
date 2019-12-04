@@ -1,0 +1,28 @@
+.subCategories {
+  display: flex;
+  flex-wrap: wrap;
+
+  .subCategories__item {
+    flex: 0 0 calc((100% / 3) - #{$spacer * 2});
+    display: flex;
+    align-items: center;
+    margin: $spacer;
+    border: 1px solid $primary;
+    padding: $spacer / 2 $spacer;
+
+
+    @include media-breakpoint-down(sm) {
+      flex: 0 0 100%;
+      margin: $spacer / 2 0;
+    }
+
+    img {
+      max-width: 100px;
+    }
+
+    .title {
+      margin-left: $spacer;
+      margin-bottom: 0;
+    }
+  }
+}

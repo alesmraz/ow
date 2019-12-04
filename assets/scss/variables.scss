@@ -1,0 +1,68 @@
+$primary:     #92b215;
+$secondary:   #000;
+$gray:        #707070;
+$brown:       #9c9287;
+$brown-light: #F5F5F5;
+$text-color:  #7f7f7f;
+$body-color:  $text-color;
+
+$font-family-base: 'Barlow';
+$headings-font-family: 'Barlow Condensed';
+$headings-font-family-alternative: 'Barlow';
+
+$border-radius: .5rem;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 1100px,
+        xl: 1340px
+);
+
+//== Components
+
+// Top panel
+$top-panel-height: 53px;
+
+// Forms
+$form-border-color: #9e9585;
+
+// Main menu
+$main-menu-size: 1450px;
+$nav-item-height: 40px;
+
+// Filter
+$filter-width: 860px;
+
+// Section Header
+$section-header-height: (
+    sm: 120px,
+    xl: 200px
+);
+
+// Brand
+$brand-sm-size: 250px;
+
+// Mobile menu
+$mobile-side-max-width:                 300px !default;
+$mobile-side-bg:                        #f1f1f1 !default;
+$mobile-side-close-bg:                  $gray !default;
+$mobile-side-close-size:                40px !default;
+$mobile-side-link-color:                #000 !default;
+$mobile-side-link-bg:                   $mobile-side-bg !default;
+$mobile-side-link-border:               rgba($primary, 0.3) !default;
+$mobile-side-link-hover-color:          $primary !default;
+$mobile-side-link-hover-bg:             darken($mobile-side-link-bg, 3%) !default;
+
+// Modal
+$close-button-size: 30px;
+
+// Detail gallery
+$desktop-offset: -100px;
+
+/* ------------------------------------------------------------------------- */
+/* Items per row & gutters >>> */
+/* ------------------------------------------------------------------------- */
+$gutters-map:               (5px, 10px, 15px, 20px, 25px, 30px) !default;
+$max-items-per-row:         5 !default;
+/* <<< Items per row & gutters */

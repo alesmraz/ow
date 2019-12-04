@@ -1,0 +1,36 @@
+.btn-primary {
+  color: #fff;
+}
+
+.btn-wide {
+  padding-left: $spacer * 2;
+  padding-right: $spacer * 2;
+}
+
+.btn-unstyled {
+  background: #fff;
+  color: #000;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.btn-gold {
+  background-color: #BAB37A;
+  color: #fff;
+  padding-top: $spacer / 2;
+  padding-bottom: $spacer / 2;
+}
+
+.btn-white-secondary {
+  @extend .btn-secondary;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid;
+  border-radius: $border-radius;
+  padding: 6px 12px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}

@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Original wines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png"/>
+    <script src="./dist/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="./dist/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="topPanel">
+        <div class="topPanel__item topPanel__item--links">
+            <a class="icon" href="https://www.instagram.com" target="_blank">
+                <img src="./assets/svg/instagram.svg" alt="Sledujte Original wines na instagramu"></a><a class="icon" href="tel:123456789"><img src="./assets/svg/phone.svg" alt="Ozvěte se nám"><span class="ml-1 d-none d-lg-block">+420 123 456 789</span></a>
+        </div>
+        <form action="" class="topPanel__item topPanel__item--search">
+            <label for="search">
+                <span class="d-none">hledání</span>
+            </label>
+            <input id="search" placeholder="Hledej" class="form-control" name="search" type="search">
+            <button type="submit"><img src="./assets/svg/search.svg" alt="Hledat"></button>
+        </form>
+        <div class="topPanel__item topPanel__item--cart">
+            <a href="#" class="icon user">
+                <span class="mr-2 d-none d-lg-block">Vladimír dlouhý</span>
+                <img src="./assets/svg/profile.svg" alt="Přihlásit se">
+            </a>
+
+            <div class="accountPreview">
+                <button type="button" data-toggle="modal" data-target="#login" class="btn btn-primary w-100 mb-1">PŘIHLÁSIT SE</button>
+                <a href="registrace.html" class="small">ZAREGISTRUJTE SE</a>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Můj přehled</a></li>
+                    <li><a href="#">Mé objednávky</a></li>
+                    <li><a href="#">Nápověda</a></li>
+                </ul>
+            </div>
+
+            <a href="kosik.html" class="icon cart cart--preview">
+                <span class="badge badge-secondary">2</span>
+                <img src="./assets/svg/cart.svg" alt="Košík">
+            </a>
+
+            <div class="cartPreview">
+                <h4 class="cartPreview__title">Můj nákupní košík</h4>
+                <section class="productCart productCart--light">
+                    <div class="productCart__item">
+                        <div class="productCart__image">
+                            <img src="./assets/img/wines/detail.png" alt="Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut">
+                        </div>
+
+                        <div class="productCart__text">
+                            <h5 class="title">Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut</h5>
+                            <form class="buyerpanel buyerpanel--cart">
+                                <div class="price">
+                                    <del data-price="old">598,00 Kč</del>
+                                    <span data-price="actual" class="actual">539,00 Kč</span>
+                                </div>
+
+                                <div class="buyerpanel__typeSelect">
+                                    <div class="type">
+                                        <span class="type__title mb-2">Typ: PET lahev 1l (+5Kč)</span>
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="1" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="productCart__item">
+                        <div class="productCart__image">
+                            <img src="./assets/img/wines/detail.png" alt="Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut">
+                        </div>
+
+                        <div class="productCart__text">
+                            <h5 class="title">Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut</h5>
+                            <form class="buyerpanel buyerpanel--cart">
+                                <div class="price">
+                                    <del data-price="old">598,00 Kč</del>
+                                    <span data-price="actual" class="actual">539,00 Kč</span>
+                                </div>
+
+                                <div class="buyerpanel__typeSelect">
+                                    <div class="type">
+                                        <span class="type__title mb-2">Typ: Láhev</span>
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="1" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="productCart__item">
+                        <div class="productCart__image">
+                            <img src="./assets/img/wines/detail.png" alt="Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut">
+                        </div>
+
+                        <div class="productCart__text">
+                            <h5 class="title">Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut</h5>
+                            <form class="buyerpanel buyerpanel--cart">
+                                <div class="price">
+                                    <del data-price="old">598,00 Kč</del>
+                                    <span data-price="actual" class="actual">539,00 Kč</span>
+                                </div>
+
+                                <div class="buyerpanel__typeSelect">
+                                    <div class="type">
+                                        <span class="type__title mb-2">Typ: Láhev</span>
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="1" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <p class="d-flex justify-content-between mb-0 mt-2">
+                    <span class="title">Celkem <span class="gray">(Vč. DPH)</span></span>
+                    <span class="actualPrice">XXX,00 Kč</span>
+                </p>
+                <a href="kosik.html" class="btn btn-primary w-100 text-uppercase">Přejít do nákupního košíku</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="logoWrapper">
+        <a href="/" class="logo">
+            <img src="./assets/img/logo.svg" alt="Original wines">
+        </a>
+        <div class="mobileMenu" id="mobileMenu" data-toggle="mobileSide">
+            <span class="name pr-2 fs-sm">Menu</span><img src="./assets/svg/list-menu.svg" alt="">
+        </div>
+    </div>
+
+    <div class="mobileSide__close" data-toggle="mobileSide"><img src="./assets/svg/mobile-close.svg" alt="Zavřít"></div>
+
+    <div class="mobileSide hide">
+        <div class="mobileSide__inner">
+            <ul class="menu menu--mobile mobileList mobileList--sub" data-level="1">
+                <li class="mobileList__item">
+                    <a href="kategorie.html" class="mobileList__link">Lahvové víno</a>
+
+                    <ul class="mobileList mobileList--sub" data-level="2">
+                        <li class="mobileList__item">
+                            <a href="kategorie.html" class="mobileList__link">Bílá vína (10)</a>
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie.html" class="mobileList__link">Červená vína (15)</a>
+
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie.html" class="mobileList__link">Růžová vína (1)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie-stacena.html" class="mobileList__link">Stáčené víno</a>
+
+                    <ul class="mobileList mobileList--sub" data-level="2">
+                        <li class="mobileList__item">
+                            <a href="kategorie-stacena.html" class="mobileList__link">Bílá vína (10)</a>
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie-stacena.html" class="mobileList__link">Červená vína (15)</a>
+
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie-stacena.html" class="mobileList__link">Růžová vína (1)</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie.html" class="mobileList__link">Bag in box</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie-oleje.html" class="mobileList__link">Olivové oleje</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie.html" class="mobileList__link">Kegy a Bag In Boxy</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="znacka.html" class="mobileList__link">Značky</a>
+
+                    <ul class="mobileList mobileList--sub" data-level="2">
+                        <li class="mobileList__item">
+                            <a href="znacka.html" class="mobileList__link">Baldi</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-bodegas.html" class="mobileList__link">Bodegas</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-herznan.html" class="mobileList__link">Herznan</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-santero.html" class="mobileList__link">Santero</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-vendrame.html" class="mobileList__link">Vendrame</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobileList__item">
+                    <a href="nase-vinoteky.html" class="mobileList__link">Naše vinotéky</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kontakty.html" class="mobileList__link">Kontakty</a>
+                </li>
+            </ul>
+
+            <div class="mobileList__footer">Originální vína © 2019</div>
+        </div>
+    </div>
+
+
+    <div class="border-bottom border-primary">
+        <ul class="nav menu menu--main" data-level="1">
+            <li class="nav__item">
+                <a href="kategorie.html" class="nav__link">Lahvové víno</a>
+
+                <ul class="nav nav--sub" data-level="2">
+                    <li class="nav__item">
+                        <a href="kategorie.html" class="nav__link">Bílá vína (10)</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie.html" class="nav__link">Červená vína (15)</a>
+
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie.html" class="nav__link">Růžová vína (1)</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="kategorie-stacena.html" class="nav__link">Stáčené víno</a>
+
+                <ul class="nav nav--sub" data-level="2">
+                    <li class="nav__item">
+                        <a href="kategorie-stacena.html" class="nav__link">Bílá vína (10)</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie-stacena.html" class="nav__link">Červená vína (15)</a>
+
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie-stacena.html" class="nav__link">Růžová vína (1)</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="nav__item">
+                <a href="kategorie.html" class="nav__link">Bag in box</a>
+            </li>
+            <li class="nav__item">
+                <a href="kategorie-oleje.html" class="nav__link">Olivové oleje</a>
+            </li>
+            <li class="nav__item">
+                <a href="kategorie.html" class="nav__link">Kegy a Bag In Boxy</a>
+            </li>
+            <li class="nav__item">
+                <a href="znacka.html" class="nav__link">Značky</a>
+
+                <ul class="nav nav--sub" data-level="2">
+                    <li class="nav__item">
+                        <a href="znacka.html" class="nav__link">Baldi</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-bodegas.html" class="nav__link">Bodegas</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-herznan.html" class="nav__link">Herznan</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-santero.html" class="nav__link">Santero</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-vendrame.html" class="nav__link">Vendrame</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="znacka-montenigo.html" class="nav__link">Montenigo Agricola, Montorio, Verona</a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <li class="nav__item">
+                <a href="nase-vinoteky.html" class="nav__link">Naše vinotéky</a>
+            </li>
+            <li class="nav__item">
+                <a href="kontakty.html" class="nav__link">Kontakty</a>
+            </li>
+        </ul>
+    </div>
+
+</header>
+
+<main class="page">
+    <section class="container--section pt-3 cart mb-5 well-brown-light">
+
+        <div class="cartBox">
+            <h1 class="mt-1 mb-3 text-center">Můj nákupní košík (Položky: 5)</h1>
+        </div>
+
+        <!-- Account-->
+        <section class="cart-row">
+            <div class="cart-col cartBox">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Nový zákazník</h2>
+                        <p>Objednávka:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" value="register">
+                            <label class="form-check-label">Zaregistrovat účet</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="account" value="guest" checked="">
+                            <label class="form-check-label">Objednávka nepřihlášeného zákazníka</label>
+                        </div>
+                        <small class="mb-3 mt-1 d-block">Zaregistrováním budete moci nakupovat rychleji, budete mít aktuální přehled o stavu vašich
+                            objednávek a budete mocit také prohlížet objednávky, které jste již uskutečnili.</small>
+
+                        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#info" aria-expanded="false">Pokračovat</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>Zaregistrovaný zákazník</h2>
+                        <p>Jsem zaregistrovaný zákazník</p>
+                        <div class="form-group">
+                            <label class="col-form-label" for="input-email">E-mail</label>
+                            <input type="text" name="email" value="" placeholder="E-mail" id="input-email"
+                                   class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="input-password">Heslo</label>
+                            <input type="password" name="password" value="" placeholder="Heslo" id="input-password"
+                                   class="form-control">
+                            <a href="https://originalnivina.cz/index.php?route=account/forgotten">Zapomenuté heslo</a>
+                        </div>
+                        <input type="button" value="Přihlásit se" id="button-login" data-loading-text="Načítám..." class="btn btn-primary mb-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="collapse cart-row">
+            <div class="cart-col cartBox">
+
+                <h2 class="title">Osobní údaje</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="personalFirstName">Jméno</label>
+                            <input type="text" class="form-control" id="personalFirstName">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="personalLastName">Příjmení</label>
+                            <input type="text" class="form-control" id="personalLastName">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="personalEmail">E-mail</label>
+                            <input type="email" class="form-control" id="personalEmail">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="personalPhone">Telefon</label>
+                            <input type="tel" class="form-control" id="personalPhone">
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="title">Vaše heslo</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="password">Vaše heslo</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="passwordCheck">Potvrzení vašeho hesla</label>
+                            <input type="password" class="form-control" id="passwordCheck">
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="title">Doručovací údaje</h2>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="deliveryCompany">Organizace</label>
+                            <input type="text" class="form-control" id="deliveryCompany">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="deliveryCompany">IČ</label>
+                            <input type="text" class="form-control" id="deliveryIC">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="deliveryCompany">DIČ</label>
+                            <input type="text" class="form-control" id="deliveryDIC">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="deliveryStreet">Adresa 1</label>
+                            <input type="text" class="form-control" id="deliveryStreet">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="deliveryStreetNumber">Adresa 2</label>
+                            <input type="text" class="form-control" id="deliveryStreetNumber">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="deliveryCity">Město</label>
+                            <input type="text" class="form-control" id="deliveryCity">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="deliveryZip">PSČ</label>
+                            <input type="text" class="form-control" id="deliveryZip">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="deliveryState">Stát</label>
+                            <select class="custom-select" id="deliveryState" required>
+                                <option value="">Česká republika</option>
+                                <option value="1">Slovensko</option>
+                                <option value="2">Německo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group required">
+                            <label for="deliveryProvince">Kraj</label>
+                            <select class="custom-select" id="deliveryProvince" required>
+                                <option value="">Jihomoravský</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletter">
+                            <label class="form-check-label" for="newsletter">Přeji si občas posílat aktuální novinky emailem</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="personalSameAddress" checked>
+                            <label class="form-check-label" for="personalSameAddress" data-toggle="collapse"
+                                   data-target="#billing">Fakturační adresa je stejná jako doručovací</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row collapse" id="billing">
+                    <div class="col-md-12">
+                        <h2 class="title mt-md-4 mt-2">Fakturační údaje</h2>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="invoceCompany">Organizace</label>
+                                    <input type="text" class="form-control" id="invoceCompany">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group required">
+                                    <label for="invoceFirstName">Jméno</label>
+                                    <input type="text" class="form-control" id="invoceFirstName">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group required">
+                                    <label for="invoceLastName">Příjmení</label>
+                                    <input type="text" class="form-control" id="invoceLastName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="invoceAdress1">Adresa 1</label>
+                                    <input type="text" class="form-control" id="invoceAdress1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="invoceAdress2">Adresa 2</label>
+                                    <input type="text" class="form-control" id="invoceAdress2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group required">
+                                    <label for="invoceCity">Město</label>
+                                    <input type="text" class="form-control" id="invoceCity">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="invoceZip">PSČ</label>
+                                    <input type="text" class="form-control" id="invoceZip">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group required">
+                                    <label for="invoceState">Stát</label>
+                                    <select class="custom-select" id="invoceState" required>
+                                        <option value="">Česká republika</option>
+                                        <option value="1">Slovensko</option>
+                                        <option value="2">Německo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group required">
+                                    <label for="invoceProvince">Kraj</label>
+                                    <select class="custom-select" id="invoceProvince" required>
+                                        <option value="">Jihomoravský</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-sm-right text-center">
+                    <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#tra" aria-expanded="false" aria-controls="collapseExample">Pokračovat</button>
+                </p>
+
+            </div>
+        </section>
+
+
+        <section id="tra" class="collapse cart-row">
+            <section class="delivery cart-col cartBox">
+                <h2 class="title">Doprava</h2>
+                <div class="deliveryList d-flex">
+                    <label class="card mb-2">
+                        <span class="card-body">
+                            <span class="title">Osobní odběr <br><b>Nad Úžlabinou 708/1, 108 00 Praha 10 – Malešice</b> <img
+                                    class="d-block mt-2" src="./assets/img/logo.svg" width="150"
+                                    alt="originálnívína.cz"></span>
+                            <span class="price">
+                                <input type="radio" name="delivery" value="personal" checked>
+                                <span class="price price--free badge badge-secondary">Zdarma</span>
+                            </span>
+                        </span>
+                    </label>
+                    <label class="card mb-2">
+                    <span class="card-body">
+                        <span class="title">
+                            Kurýr po Praze
+                            <br>
+                            <select class="custom-select custom-select-sm " name="courierSelect" id="">
+                                <option value="">2019-11-11 10:00-10:59</option>
+                            </select>
+                            <img class="d-block mt-2" src="./assets/img/logo.svg" width="150"
+                                 alt="originálnívína.cz"></span>
+                        <span class="price">
+                            <input type="radio" name="delivery" value="courier">
+                            <span class="price">135,00 Kč</span>
+                        </span>
+                    </span>
+                </label>
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="deliveryNote">Přidejte komentář k Vaší objednávce</label>
+                    <textarea class="form-control" name="" id="deliveryNote" cols="30" rows="2"></textarea>
+                </div>
+
+                <p class="text-sm-right text-center mt-4">
+                    <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#pay" aria-expanded="false" aria-controls="collapseExample">Pokračovat</button>
+                </p>
+            </section>
+        </section>
+
+        <section id="pay" class="collapse cart-row">
+            <section class="payment cart-col cartBox">
+                    <h2 class="title">Platba</h2>
+
+                    <div class="paymentList d-flex">
+                        <label class="card mb-2">
+                        <span class="card-body">
+                            <span class="title">
+                                GoPay - zaplatit online kartou
+                                <span class="row logos">
+                                    <span class="col-2"><img src="./assets/img/payment/mc.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/visa.png" alt=""></span>
+                                </span>
+                            </span>
+                            <span class="price">
+                                <input type="radio" name="payment" value="" checked>
+                                <span class="price price--free badge badge-secondary">Zdarma</span>
+                            </span>
+                        </span>
+                        </label>
+
+                        <label class="card mb-2">
+                        <span class="card-body">
+                            <span class="title">GoPay - zaplatit online přes internet banking
+                                <span class="row logos mt-2">
+                                    <span class="col-2"><img src="./assets/img/payment/ab.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/unib.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/sb.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/rf.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/moneta.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/kb.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/ing.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/fio.png" width="35" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/era.png" width="25" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/csob.png" width="30" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/city.png" alt=""></span>
+                                    <span class="col-2"><img src="./assets/img/payment/cs.png" alt=""></span>
+                                </span>
+                            </span>
+                            <span class="price">
+                                <input type="radio" name="payment" value="">
+                                <span class="price price--free badge badge-secondary">Zdarma</span>
+                            </span>
+                        </span>
+                        </label>
+
+                        <label class="card mb-2">
+                        <span class="card-body">
+                            <span class="title">Platba při převzetí
+                                <img src="./assets/img/logo.svg" class="d-block mt-2" alt="" width="150">
+                            </span>
+                            <span class="price">
+                                <input type="radio" name="payment" value="">
+                                <span class="price price--free badge badge-secondary">Zdarma</span>
+                            </span>
+                        </span>
+                     </label>
+
+
+                        <label class="card mb-2">
+                        <span class="card-body">
+                            <span class="title">Na fakturu
+                                <img src="./assets/img/logo.svg" class="d-block mt-2" alt="" width="150">
+                            </span>
+                            <span class="price">
+                                <input type="radio" name="payment" value="">
+                                <span class="price price--free badge badge-secondary">Zdarma</span>
+                            </span>
+                        </span>
+                        </label>
+                    </div>
+
+                    <div class="text-sm-right text-center mt-4">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="gdprCheck">
+                            <label class="form-check-label text-sm-right text-center" for="gdprCheck">Přečetl jsem a souhlasím s Všeobecné obchodní podmínky</label>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#cartSummary" aria-expanded="false" aria-controls="collapseExample">Pokračovat</button>
+                    </div>
+
+                </section>
+        </section>
+
+        <section id="cartSummary" class="collapse cart-row">
+            <div class="cart-col cartBox">
+                <h2 class="title">Celkem</h2>
+                <div class="cartSummary">
+                    <div class="cartSummary__item">
+                        <div class="cartSummary__in">
+                            <h4 class="title">Zboží:</h4>
+                            <p>103.00 Kč</p>
+                        </div>
+                    </div>
+                    <div class="cartSummary__item">
+                        <div class="cartSummary__in">
+                            <h4 class="title">Doprava:</h4>
+                            <p>60.00 Kč</p>
+                        </div>
+                    </div>
+                    <div class="cartSummary__item">
+                        <div class="cartSummary__in">
+                            <h4 class="title">Platba:</h4>
+                            <p>23.00 Kč</p>
+                        </div>
+                    </div>
+                    <div class="cartSummary__item">
+                        <h4 class="title">Celkem:</h4>
+                        <p class="totalPrice">Celková cena s dph: <span class="finalPrice">123.00 Kč</span></p>
+                        <p class="noVat">bez dph: 100.00 Kč</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <small class="d-block">Přečetl jsem a souhlasím s <a href="#">Všeobecnými obchodními podmínkami</a>
+                        a odesláním s nimi souhlasím.</small>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-wide mt-3 text-white">Objednat</button>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<section id="modals">
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginLabel"><img class="mb-2 mr-2" width="40"
+                                                                 src="./assets/svg/profile-invert.svg" alt=""> Přihlásit
+                        se</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Pro přihlášení ke svému uživatelskému účtu prosím zadejte své přihlašovací
+                        údaje.</p>
+
+                    <form class="form--small">
+                        <div class="form-group">
+                            <label for="loginEmail">E-mailová adresa</label>
+                            <input type="email" class="form-control form-control-lg" id="loginEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Heslo</label>
+                            <input type="password" class="form-control form-control-password form-control-lg"
+                                   id="loginPassword">
+                            <button class="password-show" data-target="#loginPassword">Zobrazit</button>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-3 text-uppercase">Přihlásit se
+                        </button>
+
+                        <a class="d-block text-center mt-4 mb-4" href="zapomenute-heslo.html">Zapomněli jste své
+                            heslo?</a>
+                    </form>
+
+                    <div class="well well-brown-light well-out text-center mt-3">
+                        <h3 class="mb-3">Nový zákazník?</h3>
+                        <a href="registrace.html" class="btn btn-white-secondary mt-2 mb-2 w-75 ml-auto mr-auto">REGISTRUJTE
+                            SE ZDE</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Produkt: </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="buyerpanel">
+                        <div class="buyerpanel__item">
+                            <h4 class="priceLabel">Naše cena:</h4>
+                            <div class="price">
+                                <del data-price="old">598,00 Kč</del>
+                                <span data-price="actual" class="actual">539,00 Kč</span>
+                                <small data-price="noVat">Cena bez DPH: 445,45 Kč</small>
+                            </div>
+                        </div>
+                        <div class="buyerpanel__item">
+                            <div class="buyerpanel__typeSelect">
+                                <div class="type">
+                                    <img src="./assets/svg/bottle.svg" alt="" class="type__image" data-name="bottle">
+                                    <img src="./assets/svg/box.svg" alt="" class="type__image type__image--hide"
+                                         data-name="box">
+                                    <div class="type__control">
+                                        <span class="type__title" data-name="bottle">Typ: Láhev</span>
+                                        <span class="type__title type__title--hide" data-name="box">Typ: Karton</span>
+                                        <span class="text-center">Množství</span>
+
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="0" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="type type-select">
+                                    <div class="type__control">
+                                        <label>
+                                            <input data-target="bottle" type="radio" name="buyerpanelselect" checked>
+                                            <span>Lahev</span>
+                                        </label>
+                                        <label>
+                                            <input data-target="box" type="radio" name="buyerpanelselect">
+                                            <span>Karton</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-lg btn-secondary btn-wide buyerpanel__button">
+                                <span>Do košíku</span>
+                            </button>
+                        </div>
+
+                        <input type="hidden" name="id" value="123">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  border: 1px solid $form-border-color;
+}
+
+.form-group {
+  &.required {
+    label {
+      &:before {
+        content: '*';
+        color: $danger;
+      }
+    }
+  }
+}
+
+.custom-select.custom-select-sm {
+  font-size: $font-size-base;
+}
+
+.form-control-password {
+  padding-right: 80px;
+}
+
+.form--small {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.password-show {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  height: 48px;
+  background: none;
+  border: none;
+  color: #8a8a8a;
+  font-size: 12px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background: transparent;
+  opacity: 0.5;
+}

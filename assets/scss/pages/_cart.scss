@@ -1,0 +1,157 @@
+.cart--preview {
+  position: relative;
+  border-right: none !important;
+
+  @include hover-focus() {
+    ~ .cartPreview {
+      display: block;
+    }
+  }
+
+  > .badge {
+    @include size(25px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2px;
+    right: 23px;
+
+    @include media-breakpoint-down(sm) {
+      right: 5px;
+    }
+  }
+}
+
+.cartBox {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+.cart-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}
+
+.cart-col {
+  flex: 1;
+
+  > .title {
+    margin-top: $spacer * 2;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: $spacer;
+    }
+  }
+}
+
+.cart-col-line {
+  flex: 0 0 50%;
+
+  .cart-col:last-of-type {
+    margin-top: 40px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.cart-col-line-small {
+  .cart-col:last-of-type {
+    margin-top: 20px;
+  }
+}
+
+.deliveryList,
+.paymentList {
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .logos {
+    margin-top: $spacer / 4;
+
+    img {
+      max-width: 100%;
+      @include media-breakpoint-down(sm) {
+        max-width: 40px;
+      }
+    }
+  }
+}
+
+.delivery, .payment {
+
+  .card {
+    flex: 0 0 calc(100%/2 - 20px);
+    margin: 0 10px;
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 calc(100%/2 - 20px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex: 0 0 100%;
+      margin: 0;
+    }
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 1.25rem 0 1.25rem;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: .5rem;
+    }
+
+
+    .badge {
+      padding: $spacer / 2 $spacer;
+    }
+
+    .price {
+      display: flex;
+      align-items: flex-start;
+
+      @include media-breakpoint-down(sm) {
+        align-items: center;
+      }
+
+      input[type="radio"] {
+        margin-right: $spacer / 2;
+        margin-top: $spacer / 4;
+      }
+    }
+  }
+
+}
+
+.price__remove {
+  margin-top: calc(100% / 3);
+  border: none;
+  background: transparent;
+  padding: 10px 15px;
+  margin-bottom: 0.5rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+}

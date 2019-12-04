@@ -1,0 +1,59 @@
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  border-bottom: none;
+  text-align: center;
+}
+
+.modal-header .close {
+  position: absolute;
+  top: 16px;
+  right: -15px;
+  background: transparent;
+  opacity: 1;
+  padding: 0;
+  @include size($close-button-size);
+  color: #fff;
+  font-size: $close-button-size + 10px;
+
+  > span {
+    @include size($close-button-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include media-breakpoint-down(sm) {
+    right: 20px;
+    color: #000;
+  }
+}
+
+.modal-title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+  color: $secondary;
+  font-family: $font-family-base;
+}
+
+.modal-body {
+  color: $secondary;
+
+  .buyerpanel {
+
+    .price {
+      text-align: right;
+    }
+
+  }
+}
+
+.modal-footer {
+  border-top: none;
+  padding-bottom: $spacer * 2;
+}

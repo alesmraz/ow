@@ -1,0 +1,25 @@
+.backLink {
+  max-width: $main-menu-size;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+
+  &:not(.backLink--invert) svg {
+    stroke: #fff;
+  }
+
+  @include hover-focus() {
+    color: $secondary;
+
+    svg {
+      stroke: $secondary;
+    }
+  }
+}
+
+.backLink--invert {
+  color: #000;
+}

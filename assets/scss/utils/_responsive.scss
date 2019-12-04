@@ -1,0 +1,8 @@
+.mobile-only {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+
+}

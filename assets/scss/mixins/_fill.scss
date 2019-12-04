@@ -1,0 +1,7 @@
+@mixin fill($border: 0px) {
+  position: absolute;
+  top: $border;
+  left: $border;
+  width: calc(100% - #{$border * 2});
+  height: calc(100% - #{$border * 2});
+}

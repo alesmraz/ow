@@ -1,0 +1,146 @@
+.slider {
+  position: relative;
+}
+
+.slider--fullscreen {
+  height: 65vh;
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+  }
+
+  .swiper-container,
+  .swiper-wrapper,
+  .swiper-slide {
+    height: 100%;
+  }
+
+  .swiper-container {
+    @include media-breakpoint-down(sm) {
+      height: 240px;
+      margin-bottom: $spacer;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 29vh;
+
+    @include media-breakpoint-down(sm) {
+      bottom: $spacer;
+    }
+  }
+}
+
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: .3s opacity;
+  transform: translate3d(0,0,0);
+  z-index: 10;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+
+  @include media-breakpoint-down(sm) {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-container > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 4px;
+}
+
+.slider__bgImage {
+  width: 100%;
+  height: 100%;
+  @include fill();
+  @include object-fit(cover);
+
+  @include media-breakpoint-down(sm) {
+    object-position: 50% 100%;
+  }
+}
+
+.slider__content {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+
+  @include media-breakpoint-down(sm) {
+    top: calc(50%);
+  }
+
+  .title {
+    color: #fff;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px #0000006e;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.3rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .title--bold {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 3.5em;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5em;
+    }
+  }
+
+  .title--author {
+    color: $primary;
+    font-size: 2em;
+    margin-top: $spacer;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.25rem;
+      margin-top: $spacer / 2;
+    }
+
+    &:before {
+      content: '';
+      width: 30%;
+      height: 2px;
+      background: $primary;
+      margin: 0 auto $spacer auto;
+      display: block;
+
+      @include media-breakpoint-down(sm) {
+        margin-top: $spacer / 4;
+        margin-bottom: $spacer / 4;
+      }
+    }
+  }
+
+}
+
+.swiper--thumbnails {
+  @include media-breakpoint-down(sm) {
+    display: flex;
+  }
+}

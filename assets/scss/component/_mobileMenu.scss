@@ -1,0 +1,222 @@
+.mobileMenu {
+  display: none;
+  padding-right: 15px;
+  align-items: center;
+  padding-top: 5px;
+  cursor: pointer;
+
+  .name {
+    color: $gray;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  > img {
+    width: 20px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+  }
+}
+
+.menu--mobile {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+}
+
+body {
+
+  @include media-breakpoint-down(md) {
+
+
+
+    &.has--mobileSide {
+      transition: 0.6s ease;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.38);
+        z-index: 2;
+      }
+
+    }
+  }
+}
+
+.mobileSide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $mobile-side-max-width;
+  height: 100%;
+  background-color: $mobile-side-bg;
+  z-index: 1010;
+  transform: translateX($mobile-side-max-width + $mobile-side-close-size);
+  will-change: transform;
+  overflow-x: hidden;
+  transition: 0.6s ease;
+
+  &.hide {
+    display: none;
+  }
+
+  @media (max-width: ($mobile-side-max-width + $mobile-side-close-size - 1px)) {
+    /* 320px is min. supported screen size */
+    width: calc(320px  - #{$mobile-side-close-size});
+  }
+
+  &.mobileSide--open {
+    @include media-breakpoint-down(md) {
+      transform: translateX(0)
+    }
+  }
+}
+
+.mobileSide__close {
+  position: fixed;
+  right: -40px;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include size(40px);
+  background-color: $mobile-side-close-bg;
+  color: color-yiq($mobile-side-close-bg);
+  cursor: pointer;
+  z-index: 1010;
+  transition: 0.6s transform ease;
+
+  .has--mobileSide & {
+    transform: translateX(-($mobile-side-max-width + $mobile-side-close-size));
+
+    @media (max-width: ($mobile-side-max-width + $mobile-side-close-size - 1px)) {
+      /* 320px is min. supported screen size */
+      transform: translateX(-320px);
+    }
+  }
+
+  @include hover-focus() {
+    background-color: $mobile-side-bg;
+    color: color-yiq($mobile-side-bg);
+  }
+}
+
+.mobileSide__section {
+  margin-top: 1rem;
+  padding: 1rem;
+
+  > .mobileSide__title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: $font-size-base;
+  }
+}
+
+.mobileSide__list {
+  @include list-unstyled();
+  margin-bottom: 0;
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 1px solid $mobile-side-link-border;
+    color: $mobile-side-link-color;
+    background-color: $mobile-side-link-bg;
+    text-decoration: none;
+
+    @include hover-focus() {
+      color: $mobile-side-link-hover-color;
+      background-color: $mobile-side-link-hover-bg;
+    }
+
+    > .icon {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.mobileList {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include list-unstyled();
+
+  &.mobileList--hidden {
+    transform: translateX(300px)
+  }
+
+  &.mobileList--moves-out > .mobileList__item > .mobileList__link {
+    transform: translateX(-300px)
+  }
+}
+
+.mobileList,
+.mobileList__link {
+  transform: translateZ(0);
+  will-change: transform;
+  transition: 0.5s ease;
+}
+
+.mobileList__link {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid $mobile-side-link-border;
+  color: $mobile-side-link-color;
+  text-decoration: none;
+  background-color: $mobile-side-link-bg;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transform: translateZ(0);
+  will-change: transform;
+  transition: 0.5s ease;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: $mobile-side-link-hover-color;
+    background-color: $mobile-side-link-hover-bg;
+  }
+
+  &:not(.mobileList__link--backlink) .icon {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .icon {
+    width: 8px;
+  }
+}
+
+.mobileList__link--backlink .icon {
+  margin-right: 0.4rem;
+}
+
+.mobileList__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 1rem;
+  background: $primary;
+  color: #fff;
+}

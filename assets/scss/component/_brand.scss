@@ -1,0 +1,90 @@
+.brand {
+  position: relative;
+  height: 65vh;
+
+  &:before {
+    content: '';
+    @include fill();
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: auto;
+    padding-bottom: $brand-sm-size;
+  }
+
+}
+
+.brand__title {
+  @include center();
+  top: calc(50% - 5vh);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    top: calc(#{$brand-sm-size} / 2);
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.brand__slogan {
+  text-align: center;
+  color: #fff;
+  margin: 0.75rem 0;
+  font-size: 1.35em;
+  text-transform: uppercase;
+}
+
+.brand__bg {
+  @include fill();
+  @include object-fit(cover);
+
+  @include media-breakpoint-down(sm) {
+    height: $brand-sm-size;
+  }
+}
+
+.brand__logo {
+  height: 280px;
+  max-width: 600px;
+
+  @include media-breakpoint-down(sm) {
+    height: 180px;
+  }
+}
+
+.brand__logo--small {
+  height: 240px;
+  max-width: 420px;
+
+  @include media-breakpoint-down(sm) {
+    height: 100px;
+    max-width: 220px;
+  }
+}
+
+.brand__logo--large {
+  height: 160px;
+  max-width: 600px;
+
+  @include media-breakpoint-down(sm) {
+    height: 100px;
+    max-width: 290px;
+  }
+}
+
+.brand__country {
+  width: 120px;
+  margin: 15px auto 0 auto;
+
+  @include media-breakpoint-down(sm) {
+    width: 70px;
+  }
+}

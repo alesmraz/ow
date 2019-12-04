@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: $spacer 0 1.4rem 0;
+  font-size: 1rem;
+  border-radius: 0;
+  @include get-stripe-offset();
+
+  @include media-breakpoint-down(sm) {
+    padding: $spacer * 3/4 0 1.4rem 0;
+  }
+
+  @include hover-focus() {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+
+    @include hover-focus() {
+      text-decoration: none;
+    }
+  }
+
+  span.disabled {
+    color: $gray-500;
+  }
+}
+
+.pagination__actual {
+  padding: 0 $spacer * 2;
+}

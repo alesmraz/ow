@@ -1,0 +1,47 @@
+.saleCodeWrapper {
+  padding: $spacer * 2;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    padding: $spacer;
+    flex-direction: column;
+  }
+
+  label {
+    color: $text-color;
+    flex: 2;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    line-height: 2;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.25rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-base;
+      margin-bottom: $spacer / 3;
+    }
+
+  }
+}
+
+.saleCode {
+  display: flex;
+  flex: 1;
+}
+
+.saleCode__text {
+  flex: 4;
+
+  @include media-breakpoint-down(sm) {
+    flex: 2;
+    font-size: 15px;
+  }
+}
+
+.saleCode__send {
+  flex: 1;
+  margin-left: 1rem;
+}

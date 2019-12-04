@@ -1,0 +1,52 @@
+.well {
+  padding: $spacer * 2 $spacer / 2;
+  background-color: #fff;
+}
+
+.well-out {
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -16px;
+  width: calc(100% + 32px);
+}
+
+.well-brow {
+  background-color: $brown;
+  color: #fff;
+
+  .btn {
+    color: #fff;
+  }
+}
+
+.well-brown-light {
+  background-color: $brown-light;
+  color: #000;
+
+  .btn:not(.btn-primary) {
+    color: #000;
+
+    @include hover-focus() {
+      color: #fff;
+    }
+
+  }
+}
+
+.well-gray-lighten {
+  background-color: #E1E1E1;
+}
+
+
+.well-full-height {
+  height: calc(100vh - 135px);
+}
+
+
+.well-gray {
+  background-color: $gray;
+}
+
+.well-white {
+  background-color: #fff;
+}

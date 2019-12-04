@@ -1,0 +1,131 @@
+.topPanel {
+  display: flex;
+  background: $primary;
+  padding: 0 70px;
+  height: $top-panel-height;
+  margin-bottom: $spacer;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+    margin-bottom: $spacer / 2;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  img:not(.logo-img) {
+    width: 27px;
+    height: 27px;
+
+    @include media-breakpoint-down(sm) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+}
+
+.topPanel__item {
+  display: flex;
+
+  .icon {
+    padding-right: 32px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: $spacer / 1.5;
+    }
+
+    .cart {
+      padding-right: 0;
+    }
+
+    &:first-of-type {
+      border-right: 1px solid #fff;
+    }
+
+    &:last-of-type {
+      margin-left: 32px;
+
+      @include media-breakpoint-down(sm) {
+        margin-left: $spacer / 1.5;
+      }
+    }
+  }
+}
+
+.topPanel__item--links,
+.topPanel__item--search,
+.topPanel__item--cart {
+  flex: 1;
+  height: 100%;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+  }
+}
+
+.topPanel__item--links {
+  @include media-breakpoint-down(sm) {
+    justify-content: flex-start;
+
+    .icon:first-of-type {
+      padding-left: $spacer / 1.5;
+    }
+  }
+}
+
+.topPanel__item--cart {
+  justify-content: flex-end;
+
+  > .user {
+
+    @include hover-focus() {
+      ~ .accountPreview {
+        display: block;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-left: $spacer / 1.5;
+    }
+
+  }
+
+}
+
+.topPanel__item--search {
+  position: relative;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    flex: 2;
+  }
+
+  input {
+    padding-right: 45px;
+  }
+
+  button[type="submit"] {
+    position: absolute;
+    top: $top-panel-height / 6;
+    right: 0;
+    height: calc(1.5em + .75rem + 2px);
+    background-color: transparent;
+    border: none;
+    padding-right: 10px;
+
+    img {
+      width: 20px;
+
+      @include media-breakpoint-down(sm) {
+        width: 15px;
+      }
+    }
+  }
+
+}

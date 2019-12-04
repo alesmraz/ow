@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="cs" class="userSection">
+<head>
+    <meta charset="UTF-8">
+    <title>Original wines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png"/>
+    <script src="./dist/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="./dist/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<a href="/" class="logo logo--standAlone pt-4 pt-md-5 mb-4">
+    <img src="./assets/img/logo.svg" alt="Original wines">
+</a>
+
+<main class="page">
+    <div class="well well-gray-lighten">
+        <section class="section section--smaller mt-3 mb-3">
+            <h1 class="text-center text-secondary mb-3">Zapomenuté heslo</h1>
+
+            <form class="mt-4">
+                <p style="color: #000">To je v pořádku. Zadejte e-mailovou adresu, která se váže k vašemu účtu Zalando. Pokud vás máme v systému, pošleme vám odkaz pro obnovu.</p>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">E-mailová adresa</label>
+                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mt-2">Změnit heslo</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="well well-white">
+        <section class="section section--smaller mt-3 mb-3">
+            <h2 class="text-center text-secondary mb-5">Jsem tu poprvé</h2>
+
+            <a href="registrace.html" class="btn-white-secondary">Zaregistrovat se</a>
+        </section>
+    </div>
+
+</main>
+
+<section id="modals">
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginLabel"><img class="mb-2 mr-2" width="40" src="./assets/svg/profile-invert.svg" alt=""> Přihlásit se</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Pro přihlášení ke svému uživatelskému účtu prosím zadejte své přihlašovací údaje.</p>
+
+                    <form class="form--small">
+                        <div class="form-group">
+                            <label for="loginEmail">E-mailová adresa</label>
+                            <input type="email" class="form-control form-control-lg" id="loginEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Heslo</label>
+                            <input type="password" class="form-control form-control-password form-control-lg" id="loginPassword">
+                            <button class="password-show" data-target="#loginPassword">Zobrazit</button>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-3 text-uppercase">Přihlásit se</button>
+
+                        <a class="d-block text-center mt-4 mb-4" href="zapomenute-heslo.html">Zapomněli jste své heslo?</a>
+                    </form>
+
+                    <div class="well well-brown-light well-out text-center mt-3">
+                        <h3 class="mb-3">Nový zákazník?</h3>
+                        <a href="registrace.html" class="btn btn-white-secondary mt-2 mb-2 w-75 ml-auto mr-auto">REGISTRUJTE SE ZDE</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Produkt: </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="buyerpanel">
+                        <div class="buyerpanel__item">
+                            <h4 class="priceLabel">Naše cena:</h4>
+                            <div class="price">
+                                <del data-price="old">598,00 Kč</del>
+                                <span data-price="actual" class="actual">539,00 Kč</span>
+                                <small data-price="noVat">Cena bez DPH: 445,45 Kč</small>
+                            </div>
+                        </div>
+                        <div class="buyerpanel__item">
+                            <div class="buyerpanel__typeSelect">
+                                <div class="type">
+                                    <img src="./assets/svg/bottle.svg" alt="" class="type__image" data-name="bottle">
+                                    <img src="./assets/svg/box.svg" alt="" class="type__image type__image--hide" data-name="box">
+                                    <div class="type__control">
+                                        <span class="type__title" data-name="bottle">Typ: Láhev</span>
+                                        <span class="type__title type__title--hide" data-name="box">Typ: Karton</span>
+                                        <span class="text-center">Množství</span>
+
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="0" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="type type-select">
+                                    <div class="type__control">
+                                        <label>
+                                            <input data-target="bottle" type="radio" name="buyerpanelselect" checked>
+                                            <span>Lahev</span>
+                                        </label>
+                                        <label>
+                                            <input data-target="box" type="radio" name="buyerpanelselect">
+                                            <span>Karton</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-lg btn-secondary btn-wide buyerpanel__button">
+                                <span>Do košíku</span>
+                            </button>
+                        </div>
+
+                        <input type="hidden" name="id" value="123">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>

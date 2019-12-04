@@ -1,0 +1,27 @@
+.inputCounter {
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 50px;
+    text-align: center;
+    background-color: transparent;
+    font-size: $font-size-lg;
+    -moz-appearance:textfield;
+    -webkit-appearance: none;
+    margin: 0;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .minus,
+  .plus {
+    @include size(30px);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+}

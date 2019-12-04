@@ -1,0 +1,29 @@
+.productCount {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: $gray;
+  margin: 2.5rem 0;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 42.3%;
+    top: 50%;
+    position: absolute;
+    background-color: #9e9585;
+
+    @include media-breakpoint-down(sm) {
+      width: 30%;
+    }
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}

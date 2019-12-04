@@ -1,0 +1,72 @@
+[class*="ipr-"] {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  z-index: 20;
+
+  > * {
+    flex: 0 0 auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  & + & {
+    margin-top: 0;
+  }
+
+  &.slider__wrapper,
+  &.carousel__wrapper {
+    flex-wrap: nowrap;
+    width: auto;
+    margin-top: 0;
+
+    > * {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+
+  @each $gutter in $gutters-map {
+    $index: strip_unit($gutter);
+
+    &.gutter-#{$index} {
+      margin-top: -$gutter;
+
+      > * {
+        margin-top: $gutter;
+      }
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+  $ipr: $max-items-per-row;
+  @while $ipr > 1 {
+    @include media-breakpoint-up($breakpoint) {
+      .ipr#{$infix}-#{$ipr} {
+        > * {
+          width: calc((100% / #{$ipr}));
+          margin: 0;
+        }
+
+        @each $gutter in $gutters-map {
+          $index: strip_unit($gutter);
+
+          &.gutter-#{$index} {
+            margin-top: -$gutter;
+            margin-right: -$gutter;
+
+            > * {
+              width: calc((100% / #{$ipr}) - #{$gutter});
+              margin-right: $gutter;
+            }
+          }
+        }
+      }
+    }
+
+    $ipr: $ipr - 1;
+  }
+}

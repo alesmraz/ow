@@ -1,0 +1,31 @@
+.section--small {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+  }
+}
+
+.section--smaller {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;
+  }
+}
+
+.section--detail {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}

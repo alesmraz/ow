@@ -1,0 +1,43 @@
+.logoWrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1.25rem;
+    margin-top: 0.75rem;
+    justify-content: flex-end;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacer;
+
+  > img {
+    width: 350px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+
+    > img {
+      max-width: 170px;
+    }
+  }
+}
+
+.logo--standAlone {
+  @include media-breakpoint-down(sm) {
+    position: relative;
+    top: initial;
+    left: initial;
+    margin-right: initial;
+    transform: none;
+  }
+}

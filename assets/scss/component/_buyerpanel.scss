@@ -1,0 +1,296 @@
+.buyerpanel {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacer;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .priceLabel {
+    font-size: 30px;
+    flex: 1 0 50%;
+
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-lg;
+      flex: 1 0 35%;
+    }
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1;
+    padding-top: $spacer / 2;
+    flex: 1 0 50%;
+
+    @include media-breakpoint-down(sm) {
+      flex: 1 0 65%;
+      padding-top: 0;
+    }
+
+    .actual {
+      font-size: 30px;
+      font-weight: $font-weight-bold;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 28px;
+      }
+    }
+
+    small {
+      margin-top: $spacer / 2;
+      font-size: 18px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+      }
+    }
+
+    del {
+      font-size: 22px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+      }
+    }
+
+  }
+
+}
+
+.buyerpanel--detail {
+
+  .buyerpanel__item {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: $border-radius;
+  }
+
+  .buyerpanel__typeSelect {
+    justify-content: space-around;
+
+    .type {
+      height: 130px;
+
+      img {
+        height: 100px;
+
+        @include media-breakpoint-down(sm) {
+          height: 80px;
+        }
+      }
+    }
+  }
+
+  .price {
+    @include media-breakpoint-down(sm) {
+      padding-top: 0;
+
+      small {
+        margin-top: 6px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .buyerpanel__button {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+}
+
+.buyerpanel__item {
+  display: flex;
+  color: #fff;
+  background: $primary;
+  margin: $spacer / 2 $spacer;
+  padding: $spacer / 2 $spacer * 2;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: $spacer * 3/4 $spacer;
+  }
+
+  &:first-of-type {
+    justify-content: space-between;
+  }
+
+  &:last-of-type {
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+}
+
+.buyerpanel__item--noBg {
+  background: #fff;
+  color: #000;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 50%;
+    margin-left: auto !important;
+    text-align: right;
+  }
+
+  .price {
+    align-items: initial;
+  }
+}
+
+.buyerpanel__button {
+  text-transform: uppercase;
+  flex: 0 0 calc(100% - 72%);
+  font-weight: $font-weight-bold;
+  padding-top: $spacer * 0.75;
+  padding-bottom: $spacer * 0.75;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $spacer / 2;
+  }
+}
+
+.buyerpanel__typeSelect {
+  flex: 0 0 72%;
+  display: flex;
+  margin: $spacer 0;
+  padding-right: 30px;
+
+  @include media-breakpoint-down(md) {
+    padding-right: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  .type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: space-between;
+    }
+
+    img {
+      @include size(80px);
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.type--hide {
+  display: none !important;
+}
+
+.type__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: $spacer;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 auto;
+  }
+}
+
+.type__title {
+  font-size: 18px;
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+.type__image--hide,
+.type__title--hide {
+  display: none !important;
+}
+
+.buyerpanel--cart {
+  background-color: transparent;
+  color: #000;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: $spacer / 2;
+    flex-direction: row;
+  }
+
+  .price {
+    flex: initial;
+
+    small {
+      display: none;
+    }
+  }
+
+  .buyerpanel__typeSelect {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 0;
+    justify-content: space-around;
+    width: 150px;
+
+    @include media-breakpoint-down(md) {
+      width: 130px;
+      padding-left: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+    }
+
+    .type {
+      flex-direction: column;
+
+      @include media-breakpoint-down(sm) {
+        span {
+          font-size: $font-size-sm;
+        }
+      }
+
+      img {
+        max-width: 30px;
+        height: 40px;
+      }
+
+      .inputCounter {
+        @include media-breakpoint-down(sm) {
+          margin-bottom: $spacer / 2;
+        }
+      }
+
+    }
+  }
+
+  .inputCounter input {
+    border-color: #000;
+    color: #000;
+  }
+}
+
+.buyerpanel__buttonWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.type__select {
+
+}
+
+.type__select--hide {
+  display: none !important
+}
