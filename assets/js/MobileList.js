@@ -38,8 +38,8 @@ export default class MobileList {
 
         const children = [...list.children]
         children.forEach(listItem => {
-          console.log(listItem.getBoundingClientRect())
-          this.firstLevelHeight += listItem.getBoundingClientRect().height
+
+          this.firstLevelHeight += 0
           this.mobileList.appendChild(listItem)
         })
 
@@ -113,12 +113,6 @@ export default class MobileList {
 
     const body = document.querySelector('body')
     body.classList.toggle('has--mobileSide')
-
-    // if (this.mobileSide.classList.contains('mobileSide--open')) {
-    //   body.dimmer.show()
-    // } else {
-    //   body.dimmer.hide()
-    // }
   }
 
   _getHeightOfActiveLevel (list) {
