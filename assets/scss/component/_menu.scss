@@ -24,6 +24,14 @@
   .nav__item {
     height: $nav-item-height + 15px;
     border-right: 1px solid $primary;
+
+    &:last-of-type {
+      border-right: 1px solid $primary;
+    }
+
+    &:first-of-type {
+      border-left: 1px solid $primary;
+    }
   }
 }
 
@@ -44,7 +52,11 @@
   }
 
   &:last-of-type {
-    border-right: 1px solid $primary;
+    border-right: none;
+  }
+
+  &:first-of-type {
+    border-left: none;
   }
 
   @include hover-focus {

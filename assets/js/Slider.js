@@ -15,7 +15,7 @@ export default class Slider {
         prevEl: '.swiper-button-prev',
       },
       autoplay: {
-        delay: 3000,
+        delay: 5000,
       },
     }
     this.instances = []

@@ -14,14 +14,28 @@
 
   @include media-breakpoint-down(sm) {
     height: map_get($section-header-height, 'sm');
-    margin-left: -$spacer;
-    margin-right: -$spacer;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 175px;
   }
+
+  .sliderBlocks {
+    bottom: $spacer * 2;
+    max-width: map_get($container-max-widths, 'lg');
+    @include center(horizontal);
+
+    @include media-breakpoint-down(sm) {
+      bottom: -120px;
+      position: relative;
+    }
+  }
+
 
 }
 
 .sectionHeader__content {
   @include center();
+  top: calc(50% - 40px);
   text-align: center;
   color: #fff;
   z-index: 1;
@@ -35,6 +49,7 @@
 
   @include media-breakpoint-down(sm) {
     font-size: 1.75rem;
+    top: 50%;
   }
 }
 

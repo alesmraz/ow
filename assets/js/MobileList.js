@@ -38,6 +38,7 @@ export default class MobileList {
 
         const children = [...list.children]
         children.forEach(listItem => {
+          console.log(listItem.getBoundingClientRect())
           this.firstLevelHeight += listItem.getBoundingClientRect().height
           this.mobileList.appendChild(listItem)
         })

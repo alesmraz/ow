@@ -23,10 +23,11 @@
   }
 
   .swiper-pagination {
-    bottom: 29vh;
+    top: $spacer * 2;
 
     @include media-breakpoint-down(sm) {
       bottom: $spacer;
+      top: initial;
     }
   }
 }
@@ -73,6 +74,36 @@
 
   @include media-breakpoint-down(sm) {
     object-position: 50% 100%;
+  }
+}
+
+.slider__image {
+  z-index: 1;
+  position: absolute;
+}
+
+.slider__image--left {
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 30vh;
+  @include object-fit(contain);
+  object-position: left;
+}
+
+.slider__image--right {
+  top: calc(50%);
+  right: 0;
+  margin-right: 0;
+  transform: translate(0, -50%);
+  width: 100%;
+  max-height: 50vh;
+  @include object-fit(contain);
+  object-position: right;
+
+  @include media-breakpoint-down(sm) {
+    top: 50%;
+    width: 800px;
   }
 }
 
