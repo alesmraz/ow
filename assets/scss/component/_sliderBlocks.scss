@@ -89,7 +89,6 @@
 .sliderBlocks--brand {
   bottom: 1.5vh;
 
-
   @include media-breakpoint-down(sm) {
     bottom: initial;
     top: $brand-sm-size;

@@ -131,6 +131,7 @@
 
     @include media-breakpoint-down(sm) {
       @include object-fit(cover);
+      max-height: 190px;
     }
   }
 }

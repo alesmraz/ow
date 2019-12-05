@@ -14,19 +14,35 @@
 
   @include media-breakpoint-down(sm) {
     height: map_get($section-header-height, 'sm');
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 175px;
+    width: 100vw;
+    margin: 0;
   }
 
   .sliderBlocks {
     bottom: $spacer * 2;
-    max-width: map_get($container-max-widths, 'lg');
     @include center(horizontal);
 
     @include media-breakpoint-down(sm) {
       bottom: -120px;
+      top: initial;
       position: relative;
+      width: 100vw;
+    }
+
+    .sliderBlocks__item {
+
+      &:before {
+        display: none;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: 15px $spacer;
+      }
+
     }
   }
 
