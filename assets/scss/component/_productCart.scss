@@ -90,6 +90,10 @@
       flex: 2;
     }
 
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+
     .buyerpanel__typeSelect {
       margin-top: 0;
       margin-bottom: 0;

@@ -113,6 +113,7 @@
     margin-right: 0;
     width: 100%;
     padding: $spacer * 3/4 $spacer;
+    display: initial;
   }
 
   &:first-of-type {
@@ -154,6 +155,7 @@
 
   @include media-breakpoint-down(sm) {
     margin-bottom: $spacer / 2;
+    min-height: 60px;
   }
 }
 
@@ -171,6 +173,7 @@
     flex-direction: column;
     padding: 10px;
     margin-bottom: 0;
+    display: initial;
   }
 
   .type {
@@ -285,6 +288,12 @@
 .buyerpanel__buttonWrap {
   display: flex;
   flex-direction: column;
+
+  .backLink {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
 }
 
 .type__select {

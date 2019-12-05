@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+import IntersectionObserver from 'intersection-observer-polyfill';
 
 export default class Slider {
   constructor (options = {}, namespace = 'swiper') {

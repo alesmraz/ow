@@ -20,8 +20,8 @@ export default class MobileList {
         return false
       }
 
-      [...lists].forEach(list => {
-        [...list.querySelectorAll('li')].forEach(listItem => {
+      Array.from(lists).forEach(list => {
+        Array.from(list.querySelectorAll('li')).forEach(listItem => {
           // prepare stucture for inner list, hide all by .is-hidden class and append backlinks
           const innerUl = listItem.querySelector('ul')
           const innerLink = listItem.querySelector('a')
@@ -36,7 +36,7 @@ export default class MobileList {
           this._setupEvents(listItem)
         })
 
-        const children = [...list.children]
+        const children = Array.from(list.children)
         children.forEach(listItem => {
 
           this.firstLevelHeight += 0
@@ -47,7 +47,7 @@ export default class MobileList {
       })
 
       // Add event listener
-      const mobileSideTogglers = [...document.querySelectorAll('[data-toggle="mobileSide"]')]
+      const mobileSideTogglers = Array.from(document.querySelectorAll('[data-toggle="mobileSide"]'))
       if (mobileSideTogglers.length) {
 
         mobileSideTogglers.forEach((mobileSide) => {
@@ -117,7 +117,7 @@ export default class MobileList {
 
   _getHeightOfActiveLevel (list) {
     let height = 0
-    const children = [...list.children]
+    const children = Array.from(list.children)
     children.forEach(listItem => {
       height += listItem.getBoundingClientRect().height
     })
