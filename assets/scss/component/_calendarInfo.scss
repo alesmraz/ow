@@ -1,0 +1,29 @@
+.calendarInfo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: $spacer * 2;
+
+  .info {
+    @include center();
+    top: calc(50% + 35px);
+    color: #000;
+    text-align: center;
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem;
+    line-height: 1;
+
+    .date {
+      display: block;
+      margin-top: $spacer * 2;
+      color: $primary;
+
+    }
+  }
+
+  img {
+    width: 200px;
+  }
+}
