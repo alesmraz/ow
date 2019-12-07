@@ -22,6 +22,15 @@
     }
   }
 
+  &.brand {
+    @include media-breakpoint-down(sm) {
+      .swiper-container {
+        height: 250px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .swiper-pagination {
     top: $spacer * 2;
 

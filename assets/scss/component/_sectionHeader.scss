@@ -30,19 +30,13 @@
     }
 
     .sliderBlocks__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-      &:before {
-        display: none;
-      }
-
-      .title {
-        text-align: center;
-      }
-
-      @include media-breakpoint-down(sm) {
-        padding: 15px $spacer;
-      }
-
+    .sliderBlocks__item--gray .title {
+      margin-bottom: 0.5rem;
     }
   }
 

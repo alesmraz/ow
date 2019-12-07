@@ -15,3 +15,31 @@ Hlavní JS najdu: assets/js/main.js
 
 Obrázky:
 Produktová fotka: assets/img/wines/detail.png - 854x1277 - fotka se zobrazuje dvakrát menší, ale pro správné (velké) zobrazení v náhledu (klik na fotku v detailu) má dvojnásobnou velikost.
+
+
+------------------------------------------------------
+
+# 05. 12. 2019 - changes
+
+Obecné:
+1) Přeházet menu podle nové struktury.
+2) Do patičky přesunout odkaz o nás
+3) Změna stylů a js, dát na web ty upravené 
+4) Byla změna faviconu
+5) opravena responzivita na iPhone 5 a opraven problem se zobrazovanim menu - od vas neni potreba nic delat.
+
+Homepage - https://alesmraz.github.io/ow/:
+1) hlavní slider - trošku jiná struktura. Aktuálně se změnil text uprostřed na 2 obrázky.
+
+Kategorie - https://alesmraz.github.io/ow/kategorie.html:
+1) Pod hlavička (např. slovo Lahvová vína) se změnila struktura. Nyní má v sobě ještě odkazy do dalších kategorií
+2) Tlačítka ve filtraci jsou nyní zlaté
+
+Detail - https://alesmraz.github.io/ow/detail.html:
+1) Upravit toto: https://prnt.sc/q6tew7 na toto: detail.html:461
+2) V detailu by se měl zobrazit ten alert po přidání do košíku.
+
+Značky: https://alesmraz.github.io/ow/znacka.html:
+1) Změna hlavní fotky na slider
+2) Přidat výrobce
+3) Příběh, tradice a detail - byli doplněny html stránky - vasen.html, pribeh.html, tradice.html

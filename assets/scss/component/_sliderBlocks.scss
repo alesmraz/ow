@@ -91,7 +91,7 @@
 
   @include media-breakpoint-down(sm) {
     bottom: initial;
-    top: $brand-sm-size;
+    top: 0;
   }
 
   .sliderBlocks__item {

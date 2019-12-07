@@ -10,7 +10,7 @@
   }
 
   @include media-breakpoint-down(sm) {
-    height: auto;
+    height: 530px;
     padding-bottom: $brand-sm-size;
   }
 
@@ -46,6 +46,7 @@
 .brand__bg {
   @include fill();
   @include object-fit(cover);
+  filter: brightness(0.5);
 
   @include media-breakpoint-down(sm) {
     height: $brand-sm-size;

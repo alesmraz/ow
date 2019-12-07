@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Original wines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png"/>
+    <script src="../dist/index.js"></script>
+    <link type="text/css" rel="stylesheet" href="../dist/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="topPanel">
+        <div class="topPanel__item topPanel__item--links">
+            <a class="icon" href="https://www.instagram.com" target="_blank">
+                <img src="../assets/svg/instagram.svg" alt="Sledujte Original wines na instagramu"></a><a class="icon" href="tel:123456789"><img src="../assets/svg/phone.svg" alt="Ozvěte se nám"><span class="ml-1 d-none d-lg-block">+420 123 456 789</span></a>
+        </div>
+        <form action="" class="topPanel__item topPanel__item--search">
+            <label for="search">
+                <span class="d-none">hledání</span>
+            </label>
+            <input id="search" placeholder="Hledej" class="form-control" name="search" type="search">
+            <button type="submit"><img src="../assets/svg/search.svg" alt="Hledat"></button>
+        </form>
+        <div class="topPanel__item topPanel__item--cart">
+            <a href="#" class="icon user">
+                <span class="mr-2 d-none d-lg-block">Vladimír dlouhý</span>
+                <img src="../assets/svg/profile.svg" alt="Přihlásit se">
+            </a>
+
+            <div class="accountPreview">
+                <button type="button" data-toggle="modal" data-target="#login" class="btn btn-primary w-100 mb-1">PŘIHLÁSIT SE</button>
+                <a href="registrace.html" class="small">ZAREGISTRUJTE SE</a>
+
+                <ul class="list-unstyled">
+                    <li><a href="#">Můj přehled</a></li>
+                    <li><a href="#">Mé objednávky</a></li>
+                    <li><a href="#">Nápověda</a></li>
+                </ul>
+            </div>
+
+            <a href="kosik.html" class="icon cart cart--preview">
+                <span class="badge badge-secondary">2</span>
+                <img src="../assets/svg/cart.svg" alt="Košík">
+            </a>
+
+            <div class="cartPreview">
+                <h4 class="cartPreview__title">Můj nákupní košík</h4>
+                <section class="productCart productCart--light">
+                    <div class="productCart__item">
+                        <div class="productCart__image">
+                            <img src="../assets/img/wines/detail.png" alt="Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut">
+                        </div>
+
+                        <div class="productCart__text">
+                            <h5 class="title">Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut</h5>
+                            <form class="buyerpanel buyerpanel--cart">
+                                <div class="price">
+                                    <del data-price="old">598,00 Kč</del>
+                                    <span data-price="actual" class="actual">539,00 Kč</span>
+                                </div>
+
+                                <div class="buyerpanel__typeSelect">
+                                    <div class="type">
+                                        <span class="type__title mb-2">Typ: PET lahev 1l (+5Kč)</span>
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="1" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="productCart__item">
+                        <div class="productCart__image">
+                            <img src="../assets/img/wines/detail.png" alt="Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut">
+                        </div>
+
+                        <div class="productCart__text">
+                            <h5 class="title">Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut</h5>
+                            <form class="buyerpanel buyerpanel--cart">
+                                <div class="price">
+                                    <del data-price="old">598,00 Kč</del>
+                                    <span data-price="actual" class="actual">539,00 Kč</span>
+                                </div>
+
+                                <div class="buyerpanel__typeSelect">
+                                    <div class="type">
+                                        <span class="type__title mb-2">Typ: Láhev</span>
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="1" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="productCart__item">
+                        <div class="productCart__image">
+                            <img src="../assets/img/wines/detail.png" alt="Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut">
+                        </div>
+
+                        <div class="productCart__text">
+                            <h5 class="title">Rive Di Ogliano Prosecco Superiore Conegliano Valdobbiadene DOCG Brut</h5>
+                            <form class="buyerpanel buyerpanel--cart">
+                                <div class="price">
+                                    <del data-price="old">598,00 Kč</del>
+                                    <span data-price="actual" class="actual">539,00 Kč</span>
+                                </div>
+
+                                <div class="buyerpanel__typeSelect">
+                                    <div class="type">
+                                        <span class="type__title mb-2">Typ: Láhev</span>
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="1" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <p class="d-flex justify-content-between mb-0 mt-2">
+                    <span class="title">Celkem <span class="gray">(Vč. DPH)</span></span>
+                    <span class="actualPrice">XXX,00 Kč</span>
+                </p>
+                <a href="kosik.html" class="btn btn-primary w-100 text-uppercase">Přejít do nákupního košíku</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="logoWrapper">
+        <a href="/" class="logo">
+            <img src="../assets/img/home.svg" alt="" class="icon icon--home">
+            <img src="../assets/img/logo.svg" alt="Original wines">
+        </a>
+        <div class="mobileMenu" id="mobileMenu" data-toggle="mobileSide">
+            <span class="name pr-2 fs-sm">Menu</span><img src="../assets/svg/list-menu.svg" alt="">
+        </div>
+    </div>
+
+    <div class="mobileSide__close" data-toggle="mobileSide"><img src="../assets/svg/mobile-close.svg" alt="Zavřít"></div>
+
+    <div class="mobileSide hide">
+        <div class="mobileSide__inner">
+            <ul class="menu menu--mobile mobileList mobileList--sub" data-level="1">
+                <li class="mobileList__item">
+                    <a href="kategorie.html" class="mobileList__link">Lahvové víno</a>
+
+                    <ul class="mobileList mobileList--sub" data-level="2">
+                        <li class="mobileList__item">
+                            <a href="kategorie.html" class="mobileList__link">Bílá vína (10)</a>
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie.html" class="mobileList__link">Červená vína (15)</a>
+
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie.html" class="mobileList__link">Růžová vína (1)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie-stacena.html" class="mobileList__link">Stáčené víno</a>
+
+                    <ul class="mobileList mobileList--sub" data-level="2">
+                        <li class="mobileList__item">
+                            <a href="kategorie-stacena.html" class="mobileList__link">Bílá vína (10)</a>
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie-stacena.html" class="mobileList__link">Červená vína (15)</a>
+
+                        </li>
+                        <li class="mobileList__item">
+                            <a href="kategorie-stacena.html" class="mobileList__link">Růžová vína (1)</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie.html" class="mobileList__link">Bag in box</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie-oleje.html" class="mobileList__link">Olivové oleje</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kategorie.html" class="mobileList__link">Kegy a Bag In Boxy</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="znacka.html" class="mobileList__link">Značky</a>
+
+                    <ul class="mobileList mobileList--sub" data-level="2">
+                        <li class="mobileList__item">
+                            <a href="znacka.html" class="mobileList__link">Baldi</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-bodegas.html" class="mobileList__link">Bodegas</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-herznan.html" class="mobileList__link">Herznan</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-santero.html" class="mobileList__link">Santero</a>
+                        </li>
+
+                        <li class="mobileList__item">
+                            <a href="znacka-vendrame.html" class="mobileList__link">Vendrame</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mobileList__item">
+                    <a href="nase-vinoteky.html" class="mobileList__link">Naše vinotéky</a>
+                </li>
+                <li class="mobileList__item">
+                    <a href="kontakty.html" class="mobileList__link">Kontakty</a>
+                </li>
+            </ul>
+
+            <div class="mobileList__footer">Originální vína © 2019</div>
+        </div>
+    </div>
+
+
+    <div class="border-bottom border-primary">
+        <ul class="nav menu menu--main" data-level="1">
+            <li class="nav__item">
+                <a href="kategorie.html" class="nav__link">Lahvové víno</a>
+
+                <ul class="nav nav--sub" data-level="2">
+                    <li class="nav__item">
+                        <a href="kategorie.html" class="nav__link">Bílá vína (10)</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie.html" class="nav__link">Červená vína (15)</a>
+
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie.html" class="nav__link">Růžová vína (1)</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="kategorie-stacena.html" class="nav__link">Stáčené víno</a>
+
+                <ul class="nav nav--sub" data-level="2">
+                    <li class="nav__item">
+                        <a href="kategorie-stacena.html" class="nav__link">Bílá vína (10)</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie-stacena.html" class="nav__link">Červená vína (15)</a>
+
+                    </li>
+                    <li class="nav__item">
+                        <a href="kategorie-stacena.html" class="nav__link">Růžová vína (1)</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="nav__item">
+                <a href="kategorie.html" class="nav__link">Bag in box</a>
+            </li>
+            <li class="nav__item">
+                <a href="kategorie-oleje.html" class="nav__link">Olivové oleje</a>
+            </li>
+            <li class="nav__item">
+                <a href="kategorie.html" class="nav__link">Kegy a Bag In Boxy</a>
+            </li>
+            <li class="nav__item">
+                <a href="znacka.html" class="nav__link">Značky</a>
+
+                <ul class="nav nav--sub" data-level="2">
+                    <li class="nav__item">
+                        <a href="znacka.html" class="nav__link">Baldi</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-bodegas.html" class="nav__link">Bodegas</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-herznan.html" class="nav__link">Herznan</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-santero.html" class="nav__link">Santero</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="znacka-vendrame.html" class="nav__link">Vendrame</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="znacka-montenigo.html" class="nav__link">Montenigo Agricola, Montorio, Verona</a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <li class="nav__item">
+                <a href="nase-vinoteky.html" class="nav__link">Naše vinotéky</a>
+            </li>
+            <li class="nav__item">
+                <a href="kontakty.html" class="nav__link">Kontakty</a>
+            </li>
+        </ul>
+    </div>
+
+</header>
+
+<main class="page">
+    <div class="container--section">
+        <section class="sectionHeader">
+            <img src="../assets/svg/logo-baldi.svg" alt="Baldi" class="sectionHeader__content">
+            <img class="sectionHeader__bg" src="../assets/img/baldi.jpg" alt="Baldi">
+
+            <div class="sliderBlocks sliderBlocks--brand">
+                <a class="sliderBlocks__item sliderBlocks__item--gray" id="backLink">
+                    <h2 class="title">
+                        <svg stroke="#fff" xmlns="http://www.w3.org/2000/svg" class="mb-1 mr-1" width="5" height="auto" viewBox="0 0 13.422 22.601"><path d="M255.134,1384l10.24,10.24-10.24,10.24" transform="translate(267.495 1405.54) rotate(180)" fill="none" stroke-width="3"></path></svg>
+                        Zpět
+                    </h2>
+                </a>
+                <a href="pribeh.html" class="sliderBlocks__item sliderBlocks__item--primary">
+                    <h2 class="title">Příběh</h2>
+                    <p>Říká se, že chuť a vůně vína jsou plodem duše a lásky lidí, kteří obdělávají svou půdu ...</p>
+                </a>
+                <a href="vasen.html" class="sliderBlocks__item sliderBlocks__item--brown">
+                    <h2 class="title">Vášeň</h2>
+                    <p>Naše vášeň byla vždy víno. Díky spolupráci se špičkou světových vinařů máme to nejlepší na trhu.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="pb-5">
+            <h1 class="title pt-4 pt-md-0 title--story">Tradice <span>.</span></h1>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="title title--line mb-5">Jako byste seděli na italské vinici...</h4>
+                    <p>Auctor nibh lacus eveniet reiciendis culpa rutrum! Nascetur impedit id nibh earum? Laoreet porttitor phasellus!</p>
+                    <p>Diam nesciunt anim! Volutpat sem faucibus cupiditate laoreet esse, porro dignissimos adipiscing, dolor semper nesciunt magna augue ultricies massa natus laboriosam distinctio porttitor modi feugiat tempus officiis! Sit diam urna? Earum luctus? Corrupti iure fuga mollis consectetur temporibus repellendus non. Ipsum ornare laudantium ipsam cum viverra! Ridiculus lacus,</p>
+                    <p>expedita fugit qui ipsa earum ratione, nonummy voluptatem doloremque, maxime irure magni, cursus occaecat veritatis</p>
+
+                    <p>us! Magnam repellendus consectetuer tempore veniam! Expedita. <b>Praesent!</b> Molestiae ridiculus bibendum, urna consec</p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="title title--line mb-5">Italská vína patří mezi spotřebiteli mezi nejoblíbenější.</h4>
+                    <p>Auctor nibh lacus eveniet reiciendis culpa rutrum! Nascetur impedit id nibh earum? Laoreet porttitor phasellus!</p>
+                    <p>Diam nesciunt anim! Volutpat sem faucibus cupiditate laoreet esse, porro dignissimos adipiscing, dolor semper nesciunt magna augue ultricies massa natus laboriosam distinctio porttitor modi feugiat tempus officiis! Sit diam urna? Earum luctus? Corrupti iure fuga mollis consectetur temporibus repellendus non. Ipsum ornare laudantium ipsam cum viverra! Ridiculus lacus,</p>
+                    <p>expedita fugit qui ipsa earum ratione, nonummy voluptatem doloremque, maxime irure magni, cursus occaecat veritatis</p>
+
+                    <p>us! Magnam repellendus consectetuer tempore veniam! Expedita. <b>Praesent!</b> Molestiae ridiculus bibendum, urna consec</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mosaic">
+            <a href="#" class="mosaic__item">
+                <img src="../assets/img/producer/baldi/mosaic/2.jpg" alt="">
+            </a>
+            <a href="#" class="mosaic__item">
+                <img src="../assets/img/producer/baldi/mosaic/3.jpg" alt="">
+            </a>
+            <a href="#" class="mosaic__item">
+                <img src="../assets/img/producer/baldi/mosaic/1.jpg" alt="">
+            </a>
+        </section>
+
+    </div>
+</main>
+
+<footer class="container-fluid pl-0 pr-0">
+    <div class="row">
+        <div class="footer-col col-md-3">
+            <h4 class="footer__title">Informace</h4>
+            <ul class="footer__list">
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="#">Jako byste seděli na španělské vinici...</a></li>
+                <li><a href="#">Informace o dopravě</a></li>
+                <li><a href="#">Ochrana osvních údajů</a></li>
+            </ul>
+        </div>
+        <div class="footer-col col-md-3">
+            <h4 class="footer__title">Zákaznický servis</h4>
+            <ul class="footer__list">
+                <li><a href="#">Jako byste seděli na španělské vinici...</a></li>
+                <li><a href="#">Informace o dopravě</a></li>
+                <li><a href="#">Ochrana osvních údajů</a></li>
+            </ul>
+        </div>
+        <div class="footer-col col-md-3">
+            <h4 class="footer__title">Doplňky</h4>
+            <ul class="footer__list">
+                <li><a href="#">Jako byste seděli na španělské vinici...</a></li>
+                <li><a href="#">Informace o dopravě</a></li>
+                <li><a href="#">Ochrana osvních údajů</a></li>
+            </ul>
+        </div>
+        <div class="footer-col col-md-3">
+            <h4 class="footer__title">Můj účet</h4>
+            <ul class="footer__list">
+                <li><a href="#">Jako byste seděli na španělské vinici...</a></li>
+                <li><a href="#">Informace o dopravě</a></li>
+                <li><a href="#">Ochrana osvních údajů</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">Originální vína © 2019</div>
+</footer>
+
+<section id="modals">
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginLabel"><img class="mb-2 mr-2" width="40" src="../assets/svg/profile-invert.svg" alt=""> Přihlásit se</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Pro přihlášení ke svému uživatelskému účtu prosím zadejte své přihlašovací údaje.</p>
+
+                    <form class="form--small">
+                        <div class="form-group">
+                            <label for="loginEmail">E-mailová adresa</label>
+                            <input type="email" class="form-control form-control-lg" id="loginEmail">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Heslo</label>
+                            <input type="password" class="form-control form-control-password form-control-lg" id="loginPassword">
+                            <button class="password-show" data-target="#loginPassword">Zobrazit</button>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100 mt-3 text-uppercase">Přihlásit se</button>
+
+                        <a class="d-block text-center mt-4 mb-4" href="zapomenute-heslo.html">Zapomněli jste své heslo?</a>
+                    </form>
+
+                    <div class="well well-brown-light well-out text-center mt-3">
+                        <h3 class="mb-3">Nový zákazník?</h3>
+                        <a href="registrace.html" class="btn btn-white-secondary mt-2 mb-2 w-75 ml-auto mr-auto">REGISTRUJTE SE ZDE</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Produkt: </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="buyerpanel">
+                        <div class="buyerpanel__item">
+                            <h4 class="priceLabel">Naše cena:</h4>
+                            <div class="price">
+                                <del data-price="old">598,00 Kč</del>
+                                <span data-price="actual" class="actual">539,00 Kč</span>
+                                <small data-price="noVat">Cena bez DPH: 445,45 Kč</small>
+                            </div>
+                        </div>
+                        <div class="buyerpanel__item">
+                            <div class="buyerpanel__typeSelect">
+                                <div class="type">
+                                    <img src="../assets/svg/bottle.svg" alt="" class="type__image" data-name="bottle">
+                                    <img src="../assets/svg/box.svg" alt="" class="type__image type__image--hide" data-name="box">
+                                    <div class="type__control">
+                                        <span class="type__title" data-name="bottle">Typ: Láhev</span>
+                                        <span class="type__title type__title--hide" data-name="box">Typ: Karton</span>
+                                        <span class="text-center">Množství</span>
+
+                                        <div class="inputCounter form-group" data-parent-class="productDetail">
+                                            <span class="minus">-</span>
+                                            <input type="text" name="bottle" value="0" class="form-control" min="0">
+                                            <span class="plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="type type-select">
+                                    <div class="type__control">
+                                        <label>
+                                            <input data-target="bottle" type="radio" name="buyerpanelselect" checked>
+                                            <span>Lahev</span>
+                                        </label>
+                                        <label>
+                                            <input data-target="box" type="radio" name="buyerpanelselect">
+                                            <span>Karton</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-lg btn-secondary btn-wide buyerpanel__button">
+                                <span>Do košíku</span>
+                            </button>
+                        </div>
+
+                        <input type="hidden" name="id" value="123">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
