@@ -105,7 +105,7 @@ $branches-sm-height: 250px;
   padding: 5px;
   background-color: #131416;
 
-  img {
+  figure {
     width: calc(25% - 1rem);
     margin: $spacer / 2;
 
@@ -114,8 +114,11 @@ $branches-sm-height: 250px;
     }
 
     @include media-breakpoint-down(sm) {
+      width: calc(50% - 1rem);
+    }
+
+    img {
       width: 100%;
-      margin: 5px 0 0 0;
     }
   }
 }
@@ -126,7 +129,7 @@ $branches-sm-height: 250px;
   padding: 0 10px 10px 10px;
 
   @include media-breakpoint-down(md) {
-    padding-bottom: 25px;
+    padding: 0 15px 25px 15px;
   }
 
   @include media-breakpoint-down(sm) {
@@ -170,6 +173,7 @@ $branches-sm-height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 
   @include media-breakpoint-down(md) {
     flex: 2;
@@ -181,7 +185,7 @@ $branches-sm-height: 250px;
 
   .title {
     text-align: center;
-    margin-top: $spacer * 2;
+    margin-top: 0;
 
     @include media-breakpoint-down(md) {
       margin-top: 0;

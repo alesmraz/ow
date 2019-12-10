@@ -19,7 +19,7 @@ Produktová fotka: assets/img/wines/detail.png - 854x1277 - fotka se zobrazuje d
 
 ------------------------------------------------------
 
-# 05. 12. 2019 - changes
+# changes
 
 Obecné:
 1) Přeházet menu podle nové struktury.
@@ -27,6 +27,8 @@ Obecné:
 3) Změna stylů a js, dát na web ty upravené 
 4) Byla změna faviconu
 5) opravena responzivita na iPhone 5 a opraven problem se zobrazovanim menu - od vas neni potreba nic delat.
+
+!!! 6) Kodérsky a obsahově připravuje stránku nase-vinoteky.html - tu prosím na web ještě nedávat.
 
 Homepage - https://alesmraz.github.io/ow/:
 1) hlavní slider - trošku jiná struktura. Aktuálně se změnil text uprostřed na 2 obrázky.

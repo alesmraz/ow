@@ -34,10 +34,6 @@
       flex-direction: column;
       align-items: flex-start;
     }
-
-    .sliderBlocks__item--gray .title {
-      margin-bottom: 0.5rem;
-    }
   }
 
 
@@ -81,6 +77,14 @@ img.sectionHeader__content {
 
   @include media-breakpoint-down(sm) {
     width: 100px;
+  }
+}
+
+img.sectionHeader__content--large {
+  width: 440px;
+
+  @include media-breakpoint-down(sm) {
+    width: 220px;
   }
 }
 
