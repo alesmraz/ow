@@ -143,10 +143,6 @@ $branches-sm-height: 250px;
     @include media-breakpoint-down(sm) {
       max-width: 100%;
     }
-
-    img {
-      height: 110px;
-    }
   }
 
   .row {
@@ -183,9 +179,62 @@ $branches-sm-height: 250px;
     padding-left: 0;
   }
 
+  a[data-toggle="collapse"] {
+    text-decoration: none;
+    position: relative;
+    padding: 0 40px;
+
+    &:not(.collapsed) {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:after {
+      content: '';
+      background: url('../svg/arrow-invert.svg') center center no-repeat;
+      display: block;
+      width: 35px;
+      height: 35px;
+      background-size: contain;
+      @include center(vertical);
+      right: 0;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    a {
+      @include hover-focus() {
+        text-decoration: none;
+      }
+    }
+
+    .collapse {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+    .collapsing{
+      position: relative;
+      height: unset !important;
+      overflow: hidden;
+    }
+
+    a[data-toggle="collapse"] {
+      padding: 0;
+
+      &:after {
+        display: none ;
+
+      }
+    }
+  }
+
   .title {
     text-align: center;
     margin-top: 0;
+    margin-bottom: 0;
 
     @include media-breakpoint-down(md) {
       margin-top: 0;
@@ -198,7 +247,7 @@ $branches-sm-height: 250px;
   }
 
   img {
-    height: 90px;
+    height: 130px;
   }
 }
 

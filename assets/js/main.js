@@ -12,6 +12,7 @@ import Forms from './Forms'
 import Photoswipe from './Photoswipe'
 import Buyerpannel from './Buyerpannel'
 import BackLink from './BackLink'
+import Branch from "./Branch";
 
 document.addEventListener('DOMContentLoaded', () => {
   const sliders = new Slider()
@@ -41,10 +42,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const photoswipe = new Photoswipe()
   photoswipe.init()
 
-  const buyerpannel = new Buyerpannel();
+  const buyerpannel = new Buyerpannel()
   buyerpannel.init()
 
-  const backLink = new BackLink();
+  const backLink = new BackLink()
   backLink.init();
+
+  const branch = new Branch()
+  branch.init()
+
+  /** Animation */
+  let elements = null;
+  let windowHeight = null;
+
+  window.addEventListener('resize', initAnimation());
+  window.addEventListener('scroll', function () {
+    checkPositionAnimation()
+  })
+
+  function initAnimation() {
+    elements = document.querySelectorAll('.hidden-animation');
+    windowHeight = window.innerHeight;
+  }
+
+  function checkPositionAnimation() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        element.classList.add('fade-in-element');
+        element.classList.remove('hidden-animation');
+      }
+    }
+  }
+
 
 });
