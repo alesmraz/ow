@@ -19,6 +19,14 @@ Produktová fotka: assets/img/wines/detail.png - 854x1277 - fotka se zobrazuje d
 
 ------------------------------------------------------
 
+# Changes - 15.12.2019
+1) Přidání stránky moje-vinoteky.html
+    
+    1.1) Zatím přidat bez tlačítek jako je NÁPOJOVÝ LÍST, JÍDELNÍ LIST a AKCE (class - branch__btnGroup) - nemáme obsah pro odkazy
+
+2) Opravy responsivu a přidání animací - stačí nahrát nové css a js soubory
+
+
 # changes
 
 Obecné:
