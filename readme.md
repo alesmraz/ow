@@ -19,6 +19,9 @@ Produktová fotka: assets/img/wines/detail.png - 854x1277 - fotka se zobrazuje d
 
 ------------------------------------------------------
 
+# Monitor - bannery
+složka tv-banner a pak jednotlivé html soubory
+
 # Changes - 15.12.2019
 1) Přidání stránky moje-vinoteky.html
     
