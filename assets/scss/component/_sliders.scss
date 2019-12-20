@@ -41,6 +41,19 @@
   }
 }
 
+.slider__item--leftImportant {
+
+  .slider__bgImage {
+    object-position: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .slider__image--right {
+      display: none;
+    }
+  }
+}
+
 .swiper-pagination {
   position: absolute;
   text-align: center;

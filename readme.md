@@ -19,6 +19,9 @@ Produktová fotka: assets/img/wines/detail.png - 854x1277 - fotka se zobrazuje d
 
 ------------------------------------------------------
 
+# Changes - 20.12.2019
+1) Přidán nový banner na hlavní straně
+
 # Monitor - bannery
 složka tv-banner a pak jednotlivé html soubory
 
