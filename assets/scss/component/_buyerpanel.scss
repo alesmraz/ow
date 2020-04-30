@@ -112,7 +112,7 @@
     margin-left: 0;
     margin-right: 0;
     width: 100%;
-    padding: $spacer * 3/4 $spacer;
+    padding: 0 $spacer / 2;
     display: initial;
   }
 
@@ -139,6 +139,12 @@
     max-width: 50%;
     margin-left: auto !important;
     text-align: right;
+  }
+
+  @media (max-width: 650px) {
+    max-width: 100%;
+    position: relative;
+    text-align: left;
   }
 
   .price {
@@ -171,9 +177,9 @@
 
   @include media-breakpoint-down(sm) {
     flex-direction: column;
-    padding: 10px;
+    padding: 0;
     margin-bottom: 0;
-    display: initial;
+    display: flex;
   }
 
   .type {

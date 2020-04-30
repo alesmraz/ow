@@ -70,6 +70,30 @@
   margin-right: 0;
   max-width: 100%;
   margin-top: 15px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 12rem;
+  }
+}
+
+.filter--cans {
+  .filterSection {
+    .filterSection__item {
+      width: calc((100% / 8)- #{$spacer * 4});
+
+      @include media-breakpoint-down(md) {
+        width: calc((100% / 4)- #{$spacer * 4});
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: calc((100% / 2) - #{$spacer * 2});
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 12rem;
+  }
 }
 
 .filterSection {
@@ -88,7 +112,7 @@
 
   .filterSection__item {
     border-radius: $border-radius;
-    width: calc((100% / 5)- #{$spacer * 4});
+    width: calc((100% / 7)- #{$spacer * 4});
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -96,7 +120,9 @@
     align-items: center;
     transition: transform 0.3s ease-in-out;
 
-    @include hover-focus() {
+    &:hover,
+    &:focus,
+    &.active {
       transform: scale(1.1);
     }
 
@@ -105,8 +131,12 @@
       max-width: 160px;
     }
 
+    @media (max-width: 1350px) {
+      width: calc((100% / 5) - #{$spacer * 2});
+    }
+
     @include media-breakpoint-down(md) {
-      width: calc((100% / 2) - #{$spacer * 2});
+      width: calc((100% / 3) - #{$spacer * 2});
       margin-top: $spacer;
 
       > img {
@@ -116,8 +146,9 @@
     }
 
     @include media-breakpoint-down(sm) {
+      width: calc((100% / 2) - #{$spacer * 2});
       height: 140px;
-      margin: $spacer;
+      margin: 0;
 
       > img {
         max-width: 150px;
@@ -189,5 +220,19 @@
   @include media-breakpoint-down(sm) {
     margin-top: $spacer * 1.5;
     margin-bottom: $spacer / 2;
+  }
+}
+
+.filterSelect {
+  display: flex;
+  justify-content: space-around;
+  max-width: 935px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }

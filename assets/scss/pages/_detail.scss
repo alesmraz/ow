@@ -43,6 +43,7 @@
 
     > img {
       width: 100px;
+      object-fit: contain;
 
       @include media-breakpoint-down(sm) {
         max-width: 64px;
@@ -157,6 +158,13 @@
     }
   }
 
+  @media (max-width: 650px) {
+    &:not(.productDetail__params--top) {
+      max-width: 100%;
+      position: relative;
+    }
+  }
+
   .productDetail__paramsItem {
     margin-bottom: 5px;
     display: flex;
@@ -172,6 +180,10 @@
 .productDetail__params--top {
   flex-direction: row;
 
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+
   .productDetail__paramsItem {
     flex: initial;
     display: flex;
@@ -179,9 +191,16 @@
     flex-wrap: wrap;
     line-height: 1.2;
     flex-direction: row;
-    border-right: 2px solid #000;
+    border-right: 2px solid $black;
     padding-right: 10px;
     margin-right: 0.75rem;
+
+    @media (max-width: 650px) {
+      border-right: none;
+      border-bottom: 2px solid $black;
+      padding-right: 0;
+      margin-right: 0;
+    }
 
     &:last-of-type {
       border-right: none;
